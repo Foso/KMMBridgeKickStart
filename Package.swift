@@ -15,6 +15,10 @@ let package = Package(
             name: packageName,
             targets: [packageName]
         ),
+        .library(
+            name: "SwiftTest",
+            targets: ["SwiftTest"]
+        )
     ],
     targets: [
         .binaryTarget(
@@ -23,5 +27,9 @@ let package = Package(
             checksum: remoteKotlinChecksum
         )
         ,
+         .target(
+            name: "SwiftTest",
+            path: "SwiftTest"
+        )
     ]
 )
