@@ -1,8 +1,8 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let remoteKotlinUrl = "https://maven.pkg.github.com/Foso/KMMBridgeKickStart/de/jensklingenberg/kmmtest/allshared-kmmbridge/0.1.2/allshared-kmmbridge-0.1.2.zip"
-let remoteKotlinChecksum = "fe57822fa8ae5806e791558b1a632c3cd3af6f185d8e866ff4e132f40f68a6d4"
+let remoteKotlinUrl = "https://maven.pkg.github.com/Foso/KMMBridgeKickStart/de/jensklingenberg/kmmtest/allshared-kmmbridge/0.4.1/allshared-kmmbridge-0.4.1.zip"
+let remoteKotlinChecksum = "2bb118841415c4c63c28666f4a739044ce1fb3c08d0b6f24ef911640bec255ef"
 let packageName = "allshared"
 
 let package = Package(
@@ -15,10 +15,6 @@ let package = Package(
             name: packageName,
             targets: [packageName]
         ),
-        .library(
-            name: "SwiftTest",
-            targets: ["SwiftTest"]
-        )
     ],
     targets: [
         .binaryTarget(
@@ -27,9 +23,5 @@ let package = Package(
             checksum: remoteKotlinChecksum
         )
         ,
-         .target(
-            name: "SwiftTest",
-            path: "SwiftTest"
-        )
     ]
 )
